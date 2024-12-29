@@ -1,0 +1,83 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    background-color: #3c60db;
+    color: #ffffff;
+    padding: 40px 40px;
+  
+    justify-content: space-between;
+  }
+  
+  .footer-section {
+    margin-bottom: 30px;
+    text-align: left;
+
+  }
+  
+  .footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .footer-section p {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  .services {
+    max-width: 300px;
+  }
+  
+  .social-icons {
+    margin-top: 15px;
+  }
+  
+  .social-icons i {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  .contact {
+  }
+  
+  .email-input {
+    width: 250px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .submit-button {
+    display: block;
+    padding: 10px 25px;
+    margin-top: 10px;
+    background-color: #1d2951;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 1rem;
+  }
+  
+  .submit-button:hover {
+    background-color: #111d3c;
+  }
+  
+  .footer-bottom {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  .footer_head{
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+  }

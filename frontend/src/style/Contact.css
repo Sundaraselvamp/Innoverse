@@ -1,0 +1,19 @@
+.c_section1{
+    padding: 3rem 0;
+}
+.c_section11{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding: 0 40px;
+    align-items: center;
+    gap: 4rem;
+
+}
+.c_section11_1{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem; 
+}
