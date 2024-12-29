@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import '../style/WebDevelopment.css'
 import webd from '../images/webd.jpg'
 import webdevep from '../images/webdevep.jpeg'
+import heroImage from '../images/webhome.png'
 import Footer from './Footer'
 import Navbar from './Navbar'
 import { useMyContext } from '../context/MyContext'
@@ -93,7 +94,7 @@ function WebDevelopment() {
   return (
     <div>
         <Navbar/>
-        <section className='wd_top_section'>
+        <section className='wd_top_section' style={{ backgroundImage: `url(${heroImage})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
             <h1>Elegant Web Solutions for Your Business</h1>
             <p>Transform your digital presence with expertly crafted websites, including custom designs, e-commerce platforms, and portfolio showcases. Tailored to your needs, our web solutions help your brand stand out and thrive online.</p>
             <button>contact us</button>
