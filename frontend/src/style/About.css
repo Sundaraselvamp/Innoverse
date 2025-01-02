@@ -1,0 +1,162 @@
+/* Hero Section */
+.about-hero {
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+    padding: 50px 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Section Styling */
+.about-section {
+    padding: 30px 20px; /* Increased padding for spacing */
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
+}
+
+.about-section p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #555;
+    text-align: justify; /* Justify text for better readability */
+}
+
+.about-section h3 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: left;
+}
+
+/* List Styling */
+.about-section ul {
+    list-style-type: disc;
+    padding-left: 40px; /* Proper indentation for list items */
+    margin-top: 15px;
+}
+
+.about-section ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .about-section h2 {
+        font-size: 1.9rem;
+    }
+
+    .about-section h3 {
+        font-size: 1.4rem;
+    }
+
+    .about-section ul {
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 40px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .about-section {
+        padding: 20px 15px;
+    }
+
+    .about-section h2 {
+        font-size: 1.7rem;
+        margin-bottom: 15px;
+    }
+
+    .about-section p {
+        font-size: 0.95rem;
+    }
+
+    .about-section h3 {
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+
+    .about-section ul {
+        padding-left: 20px;
+    }
+
+    .about-section ul li {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero {
+        padding: 30px 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .about-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-section p {
+        font-size: 0.9rem;
+    }
+
+    .about-section h3 {
+        font-size: 1.1rem;
+    }
+
+    .about-section ul {
+        padding-left: 15px;
+    }
+
+    .about-section ul li {
+        font-size: 0.9rem;
+    }
+}

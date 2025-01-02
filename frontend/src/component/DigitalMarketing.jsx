@@ -1,14 +1,17 @@
 import React, { useEffect } from 'react'
 import '../style/DigitalMarketing.css'
-import images from '../images/images.jpg'
+import images from '../images/images2.png'
 import image from '../images/image.png'
+import imag from '../images/imag1.png'
 import Footer from './Footer'
 import Navbar from './Navbar'
-import heroImage from '../images/digihome1.png'
+import heroImage from '../images/digihome11.png'
 import { useMyContext } from '../context/MyContext'
+import { useNavigate } from 'react-router-dom';
 
 function DigitalMarketing() {
   const { setIsScrolled, setSelected } = useMyContext()
+  const navigate = useNavigate();
   useEffect(() => {
     setSelected('digital')
     const handleScroll = () => {
@@ -28,6 +31,10 @@ function DigitalMarketing() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleContactClick = () => {
+    navigate('/contact'); // Navigate to /contact page
+  };
 
 
   const chooseUs = [
@@ -62,7 +69,7 @@ function DigitalMarketing() {
       <section className='wd_top_section' style={{ backgroundImage: `url(${heroImage})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
         <h1>Supercharge Your Business Growth with Expert Digital Marketing Solutions</h1>
         <p>Transform your digital presence with Innoverse Digital Solutions. Our tailored strategies in SEO, social media marketing, PPC, and more are designed to help your business thrive online. Whether you want to boost your search engine rankings, engage with your audience on social platforms, or drive targeted traffic through paid ads, we create impactful solutions that deliver measurable results. Let us help you turn clicks into loyal customers and drive consistent growth for your business.</p>
-        <button>contact us</button>
+        <button onClick={handleContactClick}>contact us</button>
       </section>
       <section className='dm_section2'>
         <div className='dm_section21'>
@@ -179,7 +186,7 @@ function DigitalMarketing() {
            
         <div className="dms-image-container">
           <img
-            src={images}
+            src={imag}
             alt="Decorative"
             className="dms-decorative-image"
           />
@@ -196,7 +203,7 @@ function DigitalMarketing() {
       <p className="dms-cta-text-bold">
             Let’s grow your business together—starting today!
           </p>
-          <button className="dms-contact-button">Contact us!</button>
+          <button className="dms-contact-button" onClick={handleContactClick}>Contact us!</button>
        
       </div>
       <Footer />

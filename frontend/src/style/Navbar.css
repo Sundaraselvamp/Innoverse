@@ -1,116 +1,148 @@
-.nav_main{
-    position: fixed;
-    top: 8vh;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-    transition: top 0.3s ease-in-out;
-    
+/* General Navbar Styles */
+.nav_main {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(12, 35, 64, 0.9); /* Transparent navy */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
 }
-.nav_main.true{
-    top: 0;
+
+.nav_main.scrolled {
+  background-color: #0c2340; /* Solid navy when scrolled */
 }
-.nav_main.false{
-    top: 0;
-   
+
+.nav_con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  width: 100%;
 }
-.nav_main.true>.nav_con{
-    
-   background-color: white;
-   color: black;
-   .nav_con1.home,.nav_con1.web,.nav_con1.digital,.nav_con1.contac,.nav_con1.data{
-    
-    color: rgb(0, 0, 0);
-   }
-   .nav_con1{
-    color: black;
-   }
-   .nav_con1::after {
-   
-    background-color: #000000;
+
+/* Logo Styles */
+.nav_con1 img {
+  height: 40px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Hamburger Menu */
+.nav_toggle {
+  display: none; /* Hidden by default for desktop */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 1100; /* Ensure it stays on top */
+}
+
+.nav_toggle span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Toggle active styles */
+.nav_toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(10px);
+}
+
+.nav_toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav_toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-10px);
+}
+
+/* Navigation Links - Default State */
+.nav_links {
+  display: none; /* Hidden by default for mobile */
+  flex-direction: column; /* Stack items vertically for mobile */
+  position: absolute;
+  top: 60px; /* Space below the navbar */
+  left: 0;
+  width: 100%;
+  background-color: #0c2340;
+  z-index: 998;
+  padding: 20px 0;
+  gap: 15px; /* Space between items */
+  text-align: center;
+}
+
+/* Navigation Links - Active State */
+.nav_links.active {
+  display: flex; /* Show links when active */
+}
+
+/* Navigation Items */
+.nav_links .nav_item {
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+/* Active Nav Item */
+.nav_links .nav_item.active {
+  color: #f9a825; /* Highlight color */
+  font-weight: bold;
+  border-bottom: 2px solid #f9a825;
+}
+
+/* Ensure the Hamburger Menu Stays on Top */
+.nav_toggle {
+  z-index: 999;
+}
+
+/* Desktop View Styles */
+@media (min-width: 769px) {
+  .nav_links {
+      display: flex; /* Show links inline for desktop */
+      flex-direction: row; /* Horizontal layout */
+      position: static; /* No absolute positioning */
+      width: auto; /* Fit content */
+      background-color: transparent; /* Transparent background */
+      padding: 0;
+      gap: 20px; /* Spacing between items */
   }
 
-}
-
-
-.nav_con{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding:0 3rem;
-    height: 70px;
-    align-items: center;
-    backdrop-filter: blur(10px);
-    font-weight: 300;
-    text-transform: uppercase;
-    font-size: 1.15rem;
-    letter-spacing: 0.8px;
-    transition: all 0.3s ease-in-out;
-
-}
-.nav_con1{
-
-    border-radius: 3px;
-    display: inline-block;
-    position: relative;
-    color: #ffffffd9;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    
-}
-.nav_con1.home,.nav_con1.web,.nav_con1.digital,.nav_con1.contact,.nav_con1.data{
-    color: white;
-    font-weight: 500;
-}
-
-.nav_con1::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 1px;
-    bottom: -3px;
-    left: 0;
-    background-color: #f6f6f6;
-    transition: width 0.3s ease;
+  .nav_toggle {
+      display: none; /* Hide hamburger menu */
   }
-  
+}
 
-  
-  .nav_con1:hover::after {
-    width: 100%;
+/* Mobile View Styles */
+@media (max-width: 768px) {
+  .nav_toggle {
+      display: flex; /* Show hamburger menu */
   }
 
-  @media only screen and (max-width: 480px) {
-  
+  .nav_links {
+      display: none; /* Hide links by default */
+      flex-direction: column; /* Stack links vertically */
+  }
 
-    .nav_con{
-        width: 90%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        height: 60px;
-        align-items: center;
-        border-radius: 10px;
-        border: 1px solid rgba(128, 128, 128, 0.51);
-        backdrop-filter: blur(10px);
-        color: white;
-        font-weight: 200;
-        text-transform: uppercase;
-        font-size: 0.8rem;
-        letter-spacing: 0.8px;
-        transition: all 0.3s ease-in-out;
-    
-    }
+  .nav_links.active {
+      display: flex; /* Show links when active */
+  }
 }
-.nav_con2{
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-}
-.nav_con1>img{
-    height: 40px;
+
+/* Ensure no content overflows */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }

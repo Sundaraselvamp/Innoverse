@@ -8,9 +8,11 @@ import ContactSection from './ContactSection ';
 import Footer from './Footer';
 import Navbar from './Navbar';
 import { useMyContext } from '../context/MyContext';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 function Home() {
   const { setIsScrolled, setSelected } = useMyContext();
+  const navigate = useNavigate(); // Initialize useNavigate
 
   useEffect(() => {
     setSelected('home');
@@ -47,6 +49,10 @@ function Home() {
     }
   ];
 
+  const handleGetStartedClick = () => {
+    navigate('/contact'); // Redirect to the /contact page
+  };
+
   return (
     <div className="home_main">
       <Navbar />
@@ -61,7 +67,7 @@ function Home() {
             <h2>
               From dreams to delivery, we’re your trusted partner in success. <br /> Let’s Build Something Extraordinary Together
             </h2>
-            <button>Get Started</button>
+            <button onClick={handleGetStartedClick}>Get Started</button> {/* Add onClick handler */}
           </div>
         </div>
 

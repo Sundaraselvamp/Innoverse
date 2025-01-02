@@ -1,181 +1,257 @@
-.dm_section2{
-    padding: 3rem 6rem;
+/* General Section Styling */
+.dm_section2 {
+  padding: 3rem 6rem;
 }
-.dm_section21{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 3rem;
-}
-.dm_section22{
-    margin-top: 1rem;
-}
-.dm_section22>h2{
-    font-family: "Roboto", serif;
-    text-transform: capitalize;
-    font-weight: 500;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
 
+.dm_section21 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3rem;
 }
-.dm_section22>p{
-    width: 80%;
-}
-.dm_section3{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #b4b4b433;
-    padding: 3rem 0;
 
-
+.dm_section22 {
+  margin-top: 1rem;
+  font-size: 1rem;
 }
-.home_newhead{
+
+.dm_section22 > h2 {
+  font-family: "Roboto", serif;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.dm_section22 > p {
+  width: 80%;
+  font-size: 1rem;
+}
+
+.dm_section3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #b4b4b433;
+  padding: 3rem 2rem;
+  font-size: 1rem;
+}
+
+.home_newhead {
   margin: 0.5rem 0;
+  font-size: 1.2rem;
 }
 
+/* DS Section */
 .ds-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3rem 5rem;
-    border-radius: 8px;
-  }
-  
-  .ds-content {
-    flex: 1;
-  }
-  
-  .ds-item {
-    margin-bottom: 20px;
-  }
-  
-  .ds-heading {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #333;
-    font-family: "Roboto", serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 5rem;
+  border-radius: 8px;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
 
+.ds-content {
+  flex: 1;
+}
+
+.ds-item {
+  margin-bottom: 20px;
+}
+
+.ds-heading {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  font-family: "Roboto", serif;
+}
+
+.ds-description {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 8px;
+}
+
+.ds-image-container {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ds-image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+/* DMS Section */
+.dms-section-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  gap: 2rem;
+}
+
+.dms-content {
+  flex: 1;
+  max-width: 60%;
+}
+
+.dms-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.dms-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.dms-subheading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.dms-key-points {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.dms-key-points li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.dms-cta-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.dms-cta-text-bold {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.dms-contact-button {
+  background-color: #515c68;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dms-contact-button:hover {
+  background-color: #0056b3;
+}
+
+.dms-image-container {
+  flex: 1;
+  max-width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dms-decorative-image {
+  max-width: 60%;
+  border-radius: 8px;
+}
+
+/* DM End Section */
+.dm_end1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .ds-section,
+  .dms-section-container {
+    padding: 2rem 1rem;
   }
-  
-  .ds-description {
-    font-size: 1.2rem;
-    color: #555;
-    margin-top: 8px;
+
+  .ds-section {
+    flex-direction: column;
   }
-  
+
   .ds-image-container {
-    flex: 0 0 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex: 1;
+    max-width: 100%;
   }
-  
-  .ds-image {
+
+  .ds-content {
+    text-align: center;
+  }
+
+  .dms-content {
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .dms-image-container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .dm_section2 {
+    padding: 2rem;
+  }
+
+  .dm_section22 > p {
     width: 100%;
-    max-width: 300px;
-    border-radius: 8px;
   }
-  
+
+  .ds-section {
+    gap: 1.5rem;
+  }
 
   .dms-section-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px;
-    background-color: #fff;
-    border-radius: 8px;
+    gap: 1.5rem;
   }
-  
-  .dms-content {
-    flex: 1;
-    max-width: 60%;
-    padding-right: 20px;
+}
+
+@media (max-width: 480px) {
+  .dm_section2 {
+    padding: 1rem;
   }
-  .dm_section2>p{
-    font-size: 1.5rem;
-    text-transform: capitalize;
-  }
-  
+
+  .ds-heading,
   .dms-heading {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .dms-description {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
-  .dms-subheading {
     font-size: 1.5rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 15px;
   }
-  
-  .dms-key-points {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 20px;
-  }
-  
-  .dms-key-points li {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 10px;
-  }
-  
-  .dms-cta-text {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 10px;
-  }
-  
-  .dms-cta-text-bold {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
+
   .dms-contact-button {
-    background-color: #515c68;
-    color: #fff;
-    padding: 10px 25px;
-    border: none;
-    border-radius: 25px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 8px 20px;
+    font-size: 0.9rem;
   }
-  
-  .dms-contact-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .dms-image-container {
-    flex: 1;
-    max-width: 35%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+
+  .ds-image,
   .dms-decorative-image {
-    max-width: 100%;
-    border-radius: 8px;
+    max-width: 80%;
   }
-  
-  .dm_end1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 3rem;
-  }
+}

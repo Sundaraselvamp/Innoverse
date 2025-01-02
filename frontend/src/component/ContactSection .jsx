@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
-import '../style/ContactSection.css';
+import React, { useState } from "react";
+import "../style/ContactSection.css";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
-  const googleFormActionURL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSe32hI8jC-6AVcTp4_roePB-zxdD5QwBzpCh6fzQsOx-1Utwg/formResponse?embedded=true";
+  const googleFormActionURL =
+    "https://docs.google.com/forms/d/e/1FAIpQLSd9Zvh7cGkw6_JSsX1IECoIwcgPi0B6LmS0QmVYxIVcRyL03w/formResponse";
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -21,39 +22,50 @@ const ContactSection = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Create a new FormData object
     const formPayload = new FormData();
-    formPayload.append("entry.1633920210", formData.name); // Replace with your Google Form's name field entry ID
-    formPayload.append("entry.227649005", formData.email); // Replace with your Google Form's email field entry ID
-    formPayload.append("entry.790080973", formData.message); // Replace with your Google Form's message field entry ID
+    formPayload.append("entry.1633920210", formData.name); // Replace with your Name field entry ID
+    formPayload.append("entry.227649005", formData.email); // Replace with your Email field entry ID
+    formPayload.append("entry.7900", formData.message); // Replace with your Message field entry ID
 
+    // Submit the form using fetch
     fetch(googleFormActionURL, {
       method: "POST",
       body: formPayload,
-      mode: "no-cors", // Required for Google Forms submission
+      mode: "no-cors", // Necessary for Google Forms
     })
-      .then(() => alert("Form submitted successfully!"))
-      .catch((error) => alert("Error submitting the form: ", error));
-
-    // Reset form after submission
-    setFormData({
-      name: '',
-      email: '',
-      message: '',
-    });
+      .then(() => {
+        alert("Form submitted successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      })
+      .catch((error) => alert("Error submitting the form: " + error.message));
   };
 
   return (
     <div className="contact-section">
       <h2 className="home_heading">Get in Touch Today</h2>
       <p className="home_subheading" style={{ marginTop: "2rem" }}>
-        Partner with us for expert web development, digital marketing, and data analytics services designed to elevate your business. Let’s create solutions that drive success—tailored just for you.
+        Partner with us for expert web development, digital marketing, and data
+        analytics services designed to elevate your business. Let’s create
+        solutions that drive success—tailored just for you.
       </p>
       <div className="contact-content">
         <div className="contact-info">
           <h3>Contact Us Now and Start Your Journey!</h3>
-          <p><strong>Phone:</strong> +91 9786343389</p>
-          <p><strong>Email:</strong> info.innoversedigitals@gmail.com</p>
-          <p><strong>Address:</strong> 12/24, Palayakara Street, Porur, Chennai-600116</p>
+          <p>
+            <strong>Phone:</strong> +91 9786343389
+          </p>
+          <p>
+            <strong>Email:</strong> info@innoversedigital.in
+          </p>
+          <p>
+            <strong>Address:</strong> 12/24, Palayakara Street, Porur,
+            Chennai-600116
+          </p>
         </div>
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-group">

@@ -1,14 +1,18 @@
 import React, { useEffect } from 'react'
 import '../style/DataAnalytics.css'
-import images from '../images/images.jpg'
+import images from '../images/data11.png'
+import data2 from '../images/data21.png'
+import heroImage from '../images/datahome1.png'
 import Footer from './Footer'
 import Navbar from './Navbar'
 import { useMyContext } from '../context/MyContext'
+import { useNavigate } from 'react-router-dom';
 
 function DataAnalytics() {
     
 
    const { setIsScrolled,setSelected } = useMyContext()
+   const navigate = useNavigate();
    useEffect(() => {
     setSelected('data')
        const handleScroll = () => {
@@ -28,14 +32,17 @@ function DataAnalytics() {
          window.removeEventListener("scroll", handleScroll);
        };
      }, []);
+     const handleContactClick = () => {
+      navigate('/contact'); // Navigate to /contact page
+    };
   return (
     <div>
         <Navbar/>
-        <section className='wd_top_section'>
+        <section className='wd_top_section' style={{ backgroundImage: `url(${heroImage})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
             <h1>Unlock the Power of Data Analytics for Your Business</h1>
             <p>Leverage advanced data analytics solutions to transform your business insights into actionable strategies. At Innoverse Digital Solutions, we empower you with customized analytics tools to make smarter decisions, drive growth, and achieve lasting success. Turn data into your competitive advantage today.</p>
             <span>Get Started with Data-Driven Success</span>
-            <button>contact us</button>
+            <button onClick={handleContactClick}>contact us</button>
         </section>
         <section className='da_section1'>
             <h2 className='home_heading'>Our Data Analytics Services</h2>
@@ -91,7 +98,7 @@ function DataAnalytics() {
       </div>
       <div className="ds-image-container">
         <img
-          src={images}
+          src={data2}
           alt="Digital Marketing"
           className="ds-image"
         />
@@ -138,9 +145,7 @@ function DataAnalytics() {
                     </li>
                 </ol>
             </div>
-            <div className="da-image-container">
-                <img src={images} alt="Data Analytics" className="da-image"/>
-            </div>
+            
         </div>
 
         <div className="das-container">
@@ -153,8 +158,8 @@ function DataAnalytics() {
             <p className="das-highlight">
                 <strong>Get in touch today to explore how our analytics solutions can drive growth and success for your business.</strong>
             </p>
-            <button className="das-button">
-                Get started
+            <button className="das-button" onClick={handleContactClick}>
+                Contact Us!
             </button>
         </div>
         <Footer/>

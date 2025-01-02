@@ -1,73 +1,139 @@
 .feedback-section {
-    padding: 50px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  padding: 50px 20px; /* Adjusted padding for smaller screens */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9; /* Optional background for better section clarity */
+}
+
+.feedback-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.feedback-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.feedback-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Reduced gap for better responsiveness */
+  flex-wrap: wrap;
+}
+
+.feedback-card {
+  background-color: #ffffff; /* Subtle white background for card contrast */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px; /* Fixed width for better alignment on smaller screens */
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feedback-card:hover {
+  transform: scale(1.05); /* Subtle hover effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.stars {
+  color: #ffd700;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.feedback-text {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.5; /* Improved readability */
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.client-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.client-name {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.client-location {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .feedback-card {
+    max-width: 300px; /* Smaller card width for medium screens */
   }
-  
+}
+
+@media (max-width: 768px) {
+  .feedback-section {
+    padding: 40px 15px;
+  }
+
   .feedback-title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
   }
-  
+
   .feedback-subtitle {
     font-size: 1rem;
-    color: #555;
-    margin-bottom: 40px;
   }
-  
+
   .feedback-container {
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
-    flex-wrap: wrap;
+    gap: 1.5rem; /* Adjusted gap for better spacing */
   }
-  
+
   .feedback-card {
-    background-color: #525a6a2a;
-    border-radius: 1px;
-    padding: 20px 45px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 400px;
-    text-align: left;
+    max-width: 100%; /* Allow cards to take full width */
+    padding: 15px;
   }
-  
-  .stars {
-    color: #ffd700;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+  .feedback-title {
+    font-size: 1.5rem;
   }
-  
-  .feedback-text {
+
+  .feedback-subtitle {
     font-size: 0.9rem;
-    color: #333;
-    margin-bottom: 20px;
   }
-  
-  .client-info {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+
+  .feedback-card {
+    max-width: 100%; /* Full width for smaller devices */
+    padding: 15px;
   }
-  
+
   .client-photo {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 35px;
+    height: 35px; /* Smaller image size */
   }
-  
+
   .client-name {
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 0;
+    font-size: 0.9rem;
   }
-  
+
   .client-location {
     font-size: 0.8rem;
-    color: #777;
   }
-  
+}
